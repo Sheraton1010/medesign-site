@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>医療機関向けデザインサービス</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header> 
+    <div class="logo">
+      <a href="#home">
+        <img src="images/logo.png" alt="医療デザインサービス ロゴ">
+      </a>
+    </div>
+    <!-- ハンバーガーメニューアイコン（SP用） -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#home">ホーム</a></li>
+        <li><a href="#about">medesignについて</a></li>
+        <li><a href="#services">サービス</a></li>
+        <li><a href="#process">プロセス</a></li>
+        <li><a href="#testimonials">お客様の声</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 固定右パネル（そのまま） -->
+<div class="fixed-right-panel">
+  <button class="request-button">資料請求はこちら</button>
+  <div class="sns-icons">
+    <a href="https://twitter.com/your_account" target="_blank">
+      <img src="images/logo-black.png" alt="X">
+    </a>
+    <a href="https://line.me/ti/p/your_account" target="_blank">
+      <img src="images/LINE_Brand_icon.png" alt="LINE">
+    </a>
+  </div>
+</div>
+
+  <!-- TOPへ戻るボタン -->
+<div id="scrollToTop" class="scroll-to-top">
+  <i class="fa-solid fa-angles-up"></i>
+</div>
+
+
+  <!-- ヒーローセクション -->
+  <section class="hero" id="home">
+    <img src="images/hero.jpeg" alt="Hero Image" class="hero-image">
+    <div class="hero-content">
+      <h1>安心・信頼のデザインで地域医療を支援</h1>
+      <p>地方のクリニック・病院向けに最適化されたデザインサービス</p>
+      <button class="btn" id="contactButton">お問い合わせはこちら</button>
+    </div>
+  </section>
+
+  <!-- 私について（About） -->
+<section id="about">
+  <h2 class="section-title">medesignについて</h2>
+  <div class="about">
+    <img src="images/profileman.jpg" alt="プロフィール写真">
+    <div class="about-text">
+      <p>
+        弊社は医療機関向けに特化したデザインサービスを提供しているデザイン会社です。長年の経験と細部へのこだわりで、クリニックや病院の信頼性を高めるお手伝いをしております。地域に根ざしたデザイン提案で、安心感を演出します。
+      </p>
+      <ul>
+        <li><i class="fa-solid fa-award"></i> 医療機関向け実績多数</li>
+        <li><i class="fa-solid fa-thumbs-up"></i> 清潔感と信頼性を重視</li>
+        <li><i class="fa-solid fa-arrows-alt"></i> 柔軟な対応力</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- サービス（Services） -->
+  <section id="services">
+    <h2 class="section-title">サービス</h2>
+    <div class="services">
+      <div class="service-card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Webサイトデザイン</h3>
+        <p>クリニックや病院のブランディングに最適なWebサイトを作成します。</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>パンフレットデザイン</h3>
+        <p>医療機関の魅力を伝える、分かりやすく印象的なパンフレットをデザインします。</p>
+      </div>
+      <div class="service-card">
+        <i class="fa-solid fa-signs-post"></i>
+        <h3>院内サインデザイン</h3>
+        <p>患者さんが安心できる、清潔感のある院内サインをご提案します。</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- プロセス（Process） -->
+  <!-- 例: HTML のプロセスセクション -->
+<section id="process">
+  <h2 class="section-title">プロセス</h2>
+  <div class="process">
+    <div class="process-step">
+      <i class="fa-solid fa-headset"></i>
+      <h4>ヒアリング</h4>
+      <p>まずはご要望をお伺いします。</p>
+    </div>
+    <div class="process-step">
+      <i class="fa-solid fa-lightbulb"></i>
+      <h4>コンセプト設計</h4>
+      <p>最適なコンセプトを策定します。</p>
+    </div>
+    <div class="process-step">
+      <i class="fa-solid fa-paintbrush"></i>
+      <h4>デザイン作成</h4>
+      <p>魅力的なデザインを形にします。</p>
+    </div>
+    <div class="process-step">
+      <i class="fa-solid fa-pen-to-square"></i>
+      <h4>修正・フィードバック</h4>
+      <p>ご意見を反映し、仕上げます。</p>
+    </div>
+    <div class="process-step">
+      <i class="fa-solid fa-check-circle"></i>
+      <h4>最終納品</h4>
+      <p>納得いただける仕上がりに。</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- お客様の声（Testimonials） -->
+  <section id="testimonials">
+    <h2 class="section-title">お客様の声</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="images/profilewoman.jpeg" alt="クライアント1" class="testimonial-photo">
+        <div class="testimonial-text">
+          <p>"デザインが変わって、患者さんからの反応がとても良くなりました。"</p>
+          <span>― 地元クリニック様</span>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="images/profile2woman.jpg" alt="クライアント2" class="testimonial-photo">
+        <div class="testimonial-text">
+          <p>"細部まで丁寧な対応に安心してお任せできました。"</p>
+          <span>― 地元病院様</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アコーディオン式Q&A -->
+  <section id="qa">
+    <h2 class="section-title">よくある質問</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">質問1：デザインの制作期間はどれくらいですか？</div>
+        <div class="accordion-content">
+          <p>通常、コンセプトの打ち合わせから最終納品まで2〜4週間程度を目安にしております。ただし、内容によって前後する場合がございます。</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">質問2：料金はどのように決まりますか？</div>
+        <div class="accordion-content">
+          <p>案件の規模や内容によって異なりますので、まずはお気軽にお問い合わせください。詳細なお見積もりをご提示いたします。</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">質問3：修正はどの程度対応可能ですか？</div>
+        <div class="accordion-content">
+          <p>お客様にご満足いただけるまで、何度でも修正を承っております。細かいご要望もぜひご相談ください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ（Contact） -->
+  <section id="contact">
+    <h2 class="section-title">お問い合わせ</h2>
+    <div class="contact-form">
+      <form action="send_email.php" method="POST">
+        <input type="text" name="name" placeholder="お名前" required>
+        <input type="email" name="email" placeholder="メールアドレス" required>
+        <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p>© 2025 medesign</p>
+    <div>
+      <a href="#home">ホーム</a>
+      <a href="#about">私について</a>
+      <a href="#services">サービス</a>
+      <a href="#process">プロセス</a>
+      <a href="#testimonials">お客様の声</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+    <!-- ここにフッター用のSNSアイコン -->
+    <div class="footer-sns">
+      <a href="https://twitter.com/your_account" target="_blank">
+        <img src="images/logo-white.png" alt="X">
+      </a>
+      <a href="https://line.me/ti/p/your_account" target="_blank">
+        <img src="images/LINE_Brand_icon.png" alt="LINE">
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
