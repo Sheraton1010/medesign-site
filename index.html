@@ -3,226 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>医療機関向けデザインサービス</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-  </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="description" content="medesignは医療広報、Web制作、デザイン、ライティングを横断して支援するポートフォリオサイトです。">
+  <title>medesign | 医療広報・Web制作・デザイン</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- ヘッダー -->
-  <header> 
-    <div class="logo">
-      <a href="#home">
-        <img src="images/logo.png" alt="医療デザインサービス ロゴ">
-      </a>
-    </div>
-    <!-- ハンバーガーメニューアイコン（SP用） -->
-    <div class="hamburger" id="hamburger">
+  <header class="site-header">
+    <a class="site-logo" href="#top" aria-label="medesign トップへ">
+      <img src="images/logo.png" alt="medesign">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span></span>
       <span></span>
       <span></span>
-    </div>
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#about">medesignについて</a></li>
-        <li><a href="#services">サービス</a></li>
-        <li><a href="#process">プロセス</a></li>
-        <li><a href="#testimonials">お客様の声</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
+      <span class="sr-only">メニュー</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="主要ナビゲーション">
+      <a href="#services">サービス</a>
+      <a href="#works">制作実績</a>
+      <a href="#strengths">得意分野</a>
+      <a href="#profile">プロフィール</a>
+      <a class="nav-contact" href="#contact">相談する</a>
     </nav>
   </header>
 
-  <!-- 固定右パネル（そのまま） -->
-<div class="fixed-right-panel">
-  <button class="request-button">資料請求はこちら</button>
-  <div class="sns-icons">
-    <a href="https://twitter.com/your_account" target="_blank">
-      <img src="images/logo-black.png" alt="X">
-    </a>
-    <a href="https://line.me/ti/p/your_account" target="_blank">
-      <img src="images/LINE_Brand_icon.png" alt="LINE">
-    </a>
-  </div>
-</div>
-
-  <!-- TOPへ戻るボタン -->
-<div id="scrollToTop" class="scroll-to-top">
-  <i class="fa-solid fa-angles-up"></i>
-</div>
-
-
-  <!-- ヒーローセクション -->
-  <section class="hero" id="home">
-    <img src="images/hero.jpeg" alt="Hero Image" class="hero-image">
-    <div class="hero-content">
-      <h1>安心・信頼のデザインで地域医療を支援</h1>
-      <p>地方のクリニック・病院向けに最適化されたデザインサービス</p>
-      <button class="btn" id="contactButton">お問い合わせはこちら</button>
-    </div>
-  </section>
-
-  <!-- 私について（About） -->
-<section id="about">
-  <h2 class="section-title">medesignについて</h2>
-  <div class="about">
-    <img src="images/profileman.jpg" alt="プロフィール写真">
-    <div class="about-text">
-      <p>
-        弊社は医療機関向けに特化したデザインサービスを提供しているデザイン会社です。長年の経験と細部へのこだわりで、クリニックや病院の信頼性を高めるお手伝いをしております。地域に根ざしたデザイン提案で、安心感を演出します。
-      </p>
-      <ul>
-        <li><i class="fa-solid fa-award"></i> 医療機関向け実績多数</li>
-        <li><i class="fa-solid fa-thumbs-up"></i> 清潔感と信頼性を重視</li>
-        <li><i class="fa-solid fa-arrows-alt"></i> 柔軟な対応力</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-  <!-- サービス（Services） -->
-  <section id="services">
-    <h2 class="section-title">サービス</h2>
-    <div class="services">
-      <div class="service-card">
-        <i class="fa-solid fa-laptop-code"></i>
-        <h3>Webサイトデザイン</h3>
-        <p>クリニックや病院のブランディングに最適なWebサイトを作成します。</p>
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Medical PR / Web Design / Writing</p>
+          <h1>医療の想いを、伝わる言葉とデザインへ。</h1>
+          <p class="hero__lead">
+            medesignは、医療・ヘルスケア領域の広報、Webサイト、印刷物、記事制作を一貫して支援するクリエイティブパートナーです。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#works">実績を見る</a>
+            <a class="button button--ghost" href="#contact">お問い合わせ</a>
+          </div>
+        </div>
+        <aside class="hero__panel" aria-label="対応領域">
+          <p>対応領域</p>
+          <ul>
+            <li>クリニック・病院サイト</li>
+            <li>採用・広報コンテンツ</li>
+            <li>パンフレット・院内掲示物</li>
+            <li>医療記事・コピーライティング</li>
+          </ul>
+        </aside>
       </div>
-      <div class="service-card">
-        <i class="fa-solid fa-book-open"></i>
-        <h3>パンフレットデザイン</h3>
-        <p>医療機関の魅力を伝える、分かりやすく印象的なパンフレットをデザインします。</p>
+    </section>
+
+    <section class="section section--intro">
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">About medesign</p>
+          <h2>専門性とやさしさの両方が伝わる、医療コミュニケーションを。</h2>
+        </div>
+        <p>
+          医療機関やヘルスケアサービスに必要なのは、正確さだけではありません。患者さん、求職者、地域の方が安心して読み進められる導線と表現を設計し、信頼につながる見せ方を整えます。
+        </p>
       </div>
-      <div class="service-card">
-        <i class="fa-solid fa-signs-post"></i>
-        <h3>院内サインデザイン</h3>
-        <p>患者さんが安心できる、清潔感のある院内サインをご提案します。</p>
-      </div>
-    </div>
-  </section>
-  
+    </section>
 
-  <!-- プロセス（Process） -->
-  <!-- 例: HTML のプロセスセクション -->
-<section id="process">
-  <h2 class="section-title">プロセス</h2>
-  <div class="process">
-    <div class="process-step">
-      <i class="fa-solid fa-headset"></i>
-      <h4>ヒアリング</h4>
-      <p>まずはご要望をお伺いします。</p>
-    </div>
-    <div class="process-step">
-      <i class="fa-solid fa-lightbulb"></i>
-      <h4>コンセプト設計</h4>
-      <p>最適なコンセプトを策定します。</p>
-    </div>
-    <div class="process-step">
-      <i class="fa-solid fa-paintbrush"></i>
-      <h4>デザイン作成</h4>
-      <p>魅力的なデザインを形にします。</p>
-    </div>
-    <div class="process-step">
-      <i class="fa-solid fa-pen-to-square"></i>
-      <h4>修正・フィードバック</h4>
-      <p>ご意見を反映し、仕上げます。</p>
-    </div>
-    <div class="process-step">
-      <i class="fa-solid fa-check-circle"></i>
-      <h4>最終納品</h4>
-      <p>納得いただける仕上がりに。</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- お客様の声（Testimonials） -->
-  <section id="testimonials">
-    <h2 class="section-title">お客様の声</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <img src="images/profilewoman.jpeg" alt="クライアント1" class="testimonial-photo">
-        <div class="testimonial-text">
-          <p>"デザインが変わって、患者さんからの反応がとても良くなりました。"</p>
-          <span>― 地元クリニック様</span>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Services</p>
+          <h2>サービス紹介</h2>
+          <p>企画から文章、デザイン、公開後の改善まで、必要な工程だけでもまとめてでも対応できます。</p>
+        </div>
+        <div class="card-grid card-grid--3">
+          <article class="service-card">
+            <span class="card-number">01</span>
+            <h3>医療広報支援</h3>
+            <p>診療方針、採用情報、地域連携、院内のお知らせなどを、読み手に届く構成と言葉に整えます。</p>
+          </article>
+          <article class="service-card">
+            <span class="card-number">02</span>
+            <h3>Webサイト制作</h3>
+            <p>クリニックサイト、サービス紹介、LPなどを、スマホで見やすい静的サイトとして設計・実装します。</p>
+          </article>
+          <article class="service-card">
+            <span class="card-number">03</span>
+            <h3>デザイン・ライティング</h3>
+            <p>パンフレット、バナー、院内掲示物、記事、コピーなど、媒体に合わせて見た目と言葉を磨きます。</p>
+          </article>
         </div>
       </div>
-      <div class="testimonial">
-        <img src="images/profile2woman.jpg" alt="クライアント2" class="testimonial-photo">
-        <div class="testimonial-text">
-          <p>"細部まで丁寧な対応に安心してお任せできました。"</p>
-          <span>― 地元病院様</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- アコーディオン式Q&A -->
-  <section id="qa">
-    <h2 class="section-title">よくある質問</h2>
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-header">質問1：デザインの制作期間はどれくらいですか？</div>
-        <div class="accordion-content">
-          <p>通常、コンセプトの打ち合わせから最終納品まで2〜4週間程度を目安にしております。ただし、内容によって前後する場合がございます。</p>
+    <section class="section section--soft" id="works">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Works</p>
+            <h2>制作実績</h2>
+          </div>
+          <p>掲載内容は差し替えや追加がしやすいカード形式です。公開できる案件名や画像が増えたら、そのまま拡張できます。</p>
+        </div>
+        <div class="works-grid">
+          <article class="work-card work-card--featured">
+            <img src="images/hero.jpeg" alt="医療とWebをイメージしたビジュアル">
+            <div>
+              <p class="work-category">Web / Branding</p>
+              <h3>クリニックサイトリニューアル</h3>
+              <p>診療内容、予約導線、初診の不安を解消する情報を整理し、信頼感のあるトップページへ再設計。</p>
+            </div>
+          </article>
+          <article class="work-card">
+            <div class="work-thumb work-thumb--blue">PR</div>
+            <p class="work-category">Medical PR</p>
+            <h3>広報コンテンツ設計</h3>
+            <p>採用ページ、院内ニュース、地域向けのお知らせを読みやすい記事構成へ。</p>
+          </article>
+          <article class="work-card">
+            <div class="work-thumb work-thumb--green">Design</div>
+            <p class="work-category">Graphic</p>
+            <h3>パンフレット・掲示物</h3>
+            <p>患者さんが迷わず読める情報量、文字サイズ、色使いを意識して紙面を作成。</p>
+          </article>
+          <article class="work-card">
+            <div class="work-thumb work-thumb--pink">Writing</div>
+            <p class="work-category">Copy / Article</p>
+            <h3>医療記事・コピー制作</h3>
+            <p>専門性を保ちながら、一般の方にも伝わるやわらかな表現へ調整。</p>
+          </article>
         </div>
       </div>
-      <div class="accordion-item">
-        <div class="accordion-header">質問2：料金はどのように決まりますか？</div>
-        <div class="accordion-content">
-          <p>案件の規模や内容によって異なりますので、まずはお気軽にお問い合わせください。詳細なお見積もりをご提示いたします。</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <div class="accordion-header">質問3：修正はどの程度対応可能ですか？</div>
-        <div class="accordion-content">
-          <p>お客様にご満足いただけるまで、何度でも修正を承っております。細かいご要望もぜひご相談ください。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- お問い合わせ（Contact） -->
-  <section id="contact">
-    <h2 class="section-title">お問い合わせ</h2>
-    <div class="contact-form">
-      <form action="send_email.php" method="POST">
-        <input type="text" name="name" placeholder="お名前" required>
-        <input type="email" name="email" placeholder="メールアドレス" required>
-        <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
-        <button type="submit">送信</button>
-      </form>
-    </div>
-  </section>
+    <section class="section" id="strengths">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Strengths</p>
+          <h2>得意分野</h2>
+          <p>医療らしい清潔感と、相談しやすい温度感のバランスを大切にしています。</p>
+        </div>
+        <div class="strength-list">
+          <div class="strength-item">
+            <h3>情報設計</h3>
+            <p>複雑な診療内容やサービスを、読み手の不安と行動に合わせて整理します。</p>
+          </div>
+          <div class="strength-item">
+            <h3>やさしい文章</h3>
+            <p>専門用語を必要以上に崩さず、伝わる順番と言葉づかいに整えます。</p>
+          </div>
+          <div class="strength-item">
+            <h3>レスポンシブ設計</h3>
+            <p>スマートフォン閲覧を前提に、余白、文字量、ボタンの押しやすさを調整します。</p>
+          </div>
+          <div class="strength-item">
+            <h3>公開後の改善</h3>
+            <p>お知らせ更新、導線見直し、既存ページの改善など、小さな運用にも対応します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- フッター -->
-  <footer>
-    <p>© 2025 medesign</p>
-    <div>
-      <a href="#home">ホーム</a>
-      <a href="#about">私について</a>
-      <a href="#services">サービス</a>
-      <a href="#process">プロセス</a>
-      <a href="#testimonials">お客様の声</a>
-      <a href="#contact">お問い合わせ</a>
-    </div>
-    <!-- ここにフッター用のSNSアイコン -->
-    <div class="footer-sns">
-      <a href="https://twitter.com/your_account" target="_blank">
-        <img src="images/logo-white.png" alt="X">
+    <section class="section section--profile" id="profile">
+      <div class="container profile">
+        <div class="profile__image">
+          <img src="images/profileman.jpg" alt="medesign プロフィール写真">
+        </div>
+        <div class="profile__content">
+          <p class="eyebrow">Profile</p>
+          <h2>医療とクリエイティブの間に立ち、伝わる形へ整えます。</h2>
+          <p>
+            medesignは、医療広報、Web制作、デザイン、ライティングを横断して支援する制作ブランドです。正確な情報を、見やすく、やさしく、信頼できる表現へ落とし込むことを得意としています。
+          </p>
+          <dl class="profile-list">
+            <div>
+              <dt>対応内容</dt>
+              <dd>Web制作、LP、広報記事、パンフレット、バナー、院内掲示物</dd>
+            </div>
+            <div>
+              <dt>大切にしていること</dt>
+              <dd>清潔感、読みやすさ、安心感、更新しやすい設計</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-box">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>まずは相談内容をお聞かせください。</h2>
+          <p>
+            Webサイトのリニューアル、広報物の見直し、文章作成など、まだ内容が固まっていない段階でもご相談いただけます。
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button--primary" href="mailto:info@example.com?subject=medesign%E3%81%B8%E3%81%AE%E7%9B%B8%E8%AB%87">メールで相談する</a>
+          <p>メールアドレスやフォームのURLは、公開前に実際の連絡先へ差し替えてください。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="scroll-top" type="button" aria-label="ページ上部へ戻る">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-logo" href="#top">
+        <img src="images/logo-white.png" alt="medesign">
       </a>
-      <a href="https://line.me/ti/p/your_account" target="_blank">
-        <img src="images/LINE_Brand_icon.png" alt="LINE">
-      </a>
+      <nav aria-label="フッターナビゲーション">
+        <a href="#services">サービス</a>
+        <a href="#works">制作実績</a>
+        <a href="#profile">プロフィール</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <p><small>&copy; 2026 medesign</small></p>
     </div>
   </footer>
 
