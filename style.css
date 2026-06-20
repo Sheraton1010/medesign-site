@@ -581,8 +581,11 @@ h3 {
   gap: 22px;
 }
 
-.footer-logo img {
-  width: 128px;
+.footer-logo {
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 .site-footer nav {
